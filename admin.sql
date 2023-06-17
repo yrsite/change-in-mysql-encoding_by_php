@@ -1,0 +1,103 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Oct 18, 2022 at 10:33 AM
+-- Server version: 8.0.31
+-- PHP Version: 7.4.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `yrsite_ekhbary`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `ID` int NOT NULL,
+  `name` varchar(225) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `phone` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `mail` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `pass` varchar(225) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `salt` varchar(225) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `admins` int DEFAULT NULL,
+  `news` int DEFAULT NULL,
+  `about` int DEFAULT NULL,
+  `contact` int DEFAULT NULL,
+  `social` int DEFAULT NULL,
+  `ads` int DEFAULT NULL,
+  `writers` int DEFAULT NULL,
+  `category` int DEFAULT NULL,
+  `articles` int DEFAULT NULL,
+  `publish_articles` int DEFAULT NULL,
+  `seo` int DEFAULT NULL,
+  `archive` int DEFAULT NULL,
+  `gallery` int DEFAULT NULL,
+  `hashtag` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`ID`, `name`, `phone`, `mail`, `pass`, `salt`, `admins`, `news`, `about`, `contact`, `social`, `ads`, `writers`, `category`, `articles`, `publish_articles`, `seo`, `archive`, `gallery`, `hashtag`) VALUES
+(89, 'ekhbary', '', '', 'b216234bd041fd10edd6ac9893699d3055d8baf3f7c6ea75e30975d3719328a62117a44167870857192e8d3dc1d5bc5fa5a5a016e8c557cd66d970e498c026d6', 'c5a215cc5f50fc9c728f261bb2c7b44c1d9a77c656aabf0e43326f019dd416795543b72b0d5da9d5b2b9654ab6b3a76a7857f2dd8bc841e597a483acd74aae5a', 1, NULL, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(103, 'shamel', '', '', '491588736b3f0132df159bdbc5384e4e60cc5dc8b161659f04cc5efb74f8d4b2da3d8168df0e3d14009b1dc0627e7075523b93fc9e73804599ab929df11bf1a3', 'e68112abbe0457f9285adc57438a748ed1b05440033d74b672fc40318c5ab826942e53fd6339d2463330e36e6d29523c9f97578743fe3f4905aab69f208ce124', 1, NULL, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1),
+(104, 'farouk', '', '', 'ac87420977cc9cc964322dd876e62d8ca049ecd58bb2192624c5523328e32bfdd12a303e4bf094f50eab72c5f3e55e89a4657e84de69213e0c24a19815886bf8', '661afedd639c0526db7cb94cd45dd8f03bd3b494979932b56c5a38094d2d41bcac812ec7ce694a050c3c7aa20d87ce198d3c6cd6f586add6cdc0057bb8b84313', 0, NULL, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1),
+(141, 'rehab2021', '', '', '4fde6d9f5ac5fce2f242c5492a1d8946a4d03b99e5bb6f947968dcd2d1495ae01cc3ff3ddfd02c256dd1e2c9d8d1f19d42b1c9fe4c021c4edd1bd5566eeb87f8', 'd91b7377368a228f69f9135ebe536f2f3178f2f1de19a20d0dc491daf6882304bb71b61da8064299f5bdffbbfb8c55dcfe8d20eb929c570ff8a4ecf826fab2c7', 1, NULL, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1),
+(142, 'muhamedebada', '', '', '8217e6b685b303a5195e75effa4c20d7afdef556a8ef272a30ad4214aacb1527df7fb79e17581210aa569a11a301effa31df44b866682e5cfeca90bd2c199c83', '35cbe69f62c6f59520031da9b61d46d70b90ec9f76ae5e3f5c37775e7d6a9215e7999363d56fa7d464301652ce4172746bc8a341143b53d81a040ba7f13d99db', 1, NULL, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1),
+(143, 'yasseratala', '', '', '4af4f09f1c0253b8b6b926d9ce40b4365274cc172241895f629df072d227c9ad3265176b93c8b98454fc5b8ed85964762383542b17260c348e3cc94b3caa016f', 'a4119f33f11d1479099c682ae75440707a8e934083865cbaf781b00dcdd4b8eafa637bd7f9514edd514de76b9f4339bdefedc13ee48526b38a98a9e0ea4dd6f6', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0),
+(152, 'mahmoud', '', '', 'fc0c5229734a598fc9dd3ed1836f730baf9b548803745b9cfc202c8e061a05df30bd74863dd2022db1f4915dcccb5e924f0b78ccba550c8288d72ecd8b72f2a8', '0f6f554870f47fb2103665a36dd33402e2f48202d2234be82622bb65b86b0dfe356c9bf74d4d2cbaeeeb92ce692e82f79315865fc7089ad3691776c23cfac6e9', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1),
+(155, 'elsayed', '', '', '9d73d3c9a3544247fd7717aeceb6c8b9929b91f682f974756f9d69f39095791118f3f4aec1b20aadf61e9b4e06e62e8ea20fe161680d3f03fc042b365abb1b3d', '6884af563afc29328599e67718c7c18b99dfb1f6be15e1809333b67cb3439d357536a742b513b645dab19ff2bb23b0b42b87a02dc7ad8a2bdd494164e487c58c', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1),
+(160, 'alaa2222', '', '', '1bda03cfd1b6c64f0ef6efc91b9956132d52da0509eee8008a00a6b5864b02085d24e36488a86922866249d081e4372780420969c33c201468c895aaf6845c70', '6e79d95bb0ed5f26416105886d46a92f0982df4ca218f73a6865dc82dab67380476ac1eb932cd49f2d24f0961052fbf20a9fca66974f61829c763c76058831c4', 1, NULL, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1),
+(168, 'diaa', '', '', '1fe7ffec597a9a945c7fad6c05278e83a1fba1ae70864e175a54d128d451d4f1afbf58af33e5fecc98a448f2910b08d46c590ebea0da40d8702e0e5483f8a312', '488432346e741437a0a0e4c658e55fe76e76eb5eaa4e2072ac032e7d6318da8ab2e865b904217b73e24fe787373107a3981c42bf0f0d6626058975d048fadf1e', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1),
+(170, 'abulhagag', '', '', '012c52ff1ed117a2cdabac3b760f59105bc6a1d615b99d588217f7ee50651b8d0414e6a745bd7f9dbed6438e18a0443957708067f89a533b390b465066b8b2fb', 'd39ecc823cbb5103051c759008544a510201b44c72bf73cb69ba9d6ab662629c723830740c9f0faec7ce509a5e23f35ef26f1e5d64c7483920bf5fd3ca15460e', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1),
+(199, 'Shady', '', '', 'd0dc5aa5c7993ead14a1bfcf3a1b19ce5455f27c278f3d8291f810812924cd2a0a7ef92ba5813fc6c26a80362e3595fb8ba65b36cf53b6bc9ad2386fe8161932', '738ac8db32074e48f95d573391746dc4509201aab2f3186f9985df73644952e8308303136cdb1fed8cac3397cf706fd7be22f6cac444a4f5dc858a31912ead04', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1),
+(201, 'refaat2021', '', '', '4a6e9fea413cfc1726d42c35335ee3584608cd127d2d41cb0f89e7e45cac53aa4a69da7fb81d5a10855571bd6765997254c80d5f159e31568cac7bcec9d021a8', '95690a1ebf679a72d4f63eca5bf9d76f5ad517a1a61256bd4c02b008935c9418b076cc3eaa56a19306c09a7821a5ad7c6ae491e589c660fec77e881b81947c40', 0, NULL, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0),
+(204, 'emy', '', '', '438c46f4a0be995a8a820112b8577b68268086cdfcc692748c465b034da3c8db520b0b9161c518345410fb7d041dc49ce7757474df2b0eb4edbe2194e0e4f036', '3636c97967a8bbad7d4378eae049ee4d1913f0bdb107f7381d975cff906aa8d3f76442eadcbb17ed33d2eb455bd1be0e95ce0bf2745fd115cfe37ef0ea19d641', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1),
+(205, 'Walaa', '', '', '17bc142859d584f04f0920efde6bba02b2a133d0559606b3103058f89cf6bef15f6b4b12d9cf77800fa260444c49c08d3b2bb579f5c4c1191aa5556be5eeaa8b', 'f3de92aedfe9e4559c0e19c0029d6c4419fbec17d05f00b864e34108536d229592c990ba951afb52239e18cf8db8de64e7e838be343eba5271fe39bbebcd0bff', 0, NULL, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0),
+(206, 'Basma', '', '', 'd334b12c240ee4d9771d2f1c5e0ffafbe5df59744e43275f2bc205b303ff28000cf46a30ff23f3b64b11c0ff8c9a5114d2615cce5dcd357d1d1e259239f8c03c', 'f91c8867fa037c153c8a207479ca29d8e0e2c9228a48912f653e8b869e018456134263e3488a8a0a98c14f97c59cd53f6805856087873ca942710b8ac38a967d', 1, NULL, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+(207, 'Toubib bechir', '', '', 'ca985240aa6f9712c56342028655127ef29f64c05cdfbf9250d250493ac1695eea6333e63b2c32c4a00d5ac6c99b5de31f2f0dac76ccb5f155c7f463aa8e5e76', '3ae119e7824b99b983f481ed4e168dbab2843c896fc82a36320d3c6640c061071b2c5777aef7f07faea5e9bca882ceefc9660a804aabfe1b042d5ffd8caf38aa', 0, NULL, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0),
+(209, 'mohbakr', '', '', 'e788d30cf1f6412d5654ff3899e2d8533867d4f5d39281e2943b47361ad54e0246def12cfab277b64c81928bc1d8e4a16931025ad14dacc1ead98da2b4666006', 'ffdcb44bde7964fb45189fc45d2828a5cbcff1eafef7199df5f782f843f03ae9002ca2253bb607e71accf0e39df3182ebb33b42e4bf6af6ddcb9c62829b598ba', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1),
+(210, 'sambatefe', '', '', '2dbd43f1e8db634699eaf488a315e0f734d4e686f2d7fc99b356f1d53e513e3606fd1051c46fa3bdd2e0fe59478e215d0555d6ff1ba557981040e380bbb0f0a1', '6b3650006259cfc3fe52c051a7c04ae3c0b23bf46236a06a29b573a7dbbd3c815425cdf9ebf19315453b93812a6e6f06df2c6ec34ebaec77f88c412e4d132489', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1),
+(211, 'tarek02022', '', '', 'c229824b97a68eca93ddf114375cb7dcf0f563a9c5a35bd3c38fce53042c2e720b222c99a496445edb931abf8abc85fd46a4e4bcea997e40cc5b53858438df52', '67fe47e7cc791574c5e747891cb8f723084ebba0534aa7eac6d98f1c31662db900a545547b9a9cb9592365baf49c98c503f58e30dea7016b2b0bdcd8d556da4f', 0, NULL, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=212;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
